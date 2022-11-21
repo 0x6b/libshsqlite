@@ -1,0 +1,23 @@
+[package]
+name = "soracom_harvest_sqlite_extension"
+version = "0.1.0"
+edition = "2021"
+authors = ["kaoru <k@warpnine.io"]
+
+[lib]
+name = "shsqlite"
+crate-type = ["cdylib"]
+
+[dependencies]
+chrono = "0.4.23"
+regex = "1.7.0"
+serde = { version = "1.0.147", features = ["serde_derive"] }
+soracom_harvest_client = { path = "../soracom_harvest_client" }
+soracom_harvest_api_client = { path = "../soracom_harvest_api_client" }
+thiserror = "1.0.37"
+typed-builder = "0.11.0"
+envy = "0.4.2"
+
+[dev-dependencies]
+rusqlite = { version = "0.28.0", features = ["bundled", "load_extension"] }
+reqwest = { version = "0.11", features = ["blocking", "json"] }

@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "soracom_harvest_api_client",
+    "soracom_harvest_client",
+    "soracom_harvest_sqlite_extension",
+]

@@ -1,0 +1,16 @@
+[package]
+name = "soracom_harvest_api_client"
+version = "0.1.0"
+edition = "2021"
+authors = ["kaoru <k@warpnine.io"]
+
+[dependencies]
+base64 = "0.13.1"
+chrono = "0.4.23"
+envy = "0.4.2"
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+serde = { version = "1.0.147", features = ["serde_derive"] }
+serde_json = "1.0.89"
+soracom_harvest_client = { path = "../soracom_harvest_client" }
+thiserror = "1.0.37"
+typed-builder = "0.11.0"
